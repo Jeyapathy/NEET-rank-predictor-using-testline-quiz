@@ -23,3 +23,8 @@ This project predicts NEET ranks based on students' performance in Testline quiz
 * API Deployment (FastAPI)
 
 * Data Storage (Redis for caching,json files which was given)
+
+## Screenshots
+![Image](https://github.com/user-attachments/assets/0f302d8f-9b62-41a0-8878-54714ab2fbed)
+
+This states a sample page of detecting the whole quiz data in which it predicts the student rank
