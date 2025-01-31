@@ -33,4 +33,4 @@ This states a sample page of detecting the whole quiz data in which it predicts 
 ![Image](https://github.com/user-attachments/assets/9d868faa-3443-43e5-a1d6-91692be8e348)
 ![Image](https://github.com/user-attachments/assets/05ad9773-21d8-42d8-a662-5957d7528974)
 
-This a interactive page of detecting the student rank predicting the results using the quiz in which the particualr student has successfully completed
+This is an interactive page of detecting the student rank predicting the results using the quiz in which the particualr student has successfully completed
