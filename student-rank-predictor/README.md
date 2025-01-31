@@ -10,7 +10,8 @@ This project analyzes testline quiz performance and predicts student rank based 
 - Predict potential college admission based on predicted rank
 - Visualize performance data and historical trends
 
-## Setup Instructions
-
-1. Clone the repository:
+## Used programs:
+- Flask for the webpage analysis
+- python
+- React for creating a backend flow of the entire predictor
 
