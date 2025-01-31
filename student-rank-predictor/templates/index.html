@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rank Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Student Rank Predictor</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-4">Performance Analysis</h2>
+                <h3 class="text-lg font-medium mb-2">Topic Performance</h3>
+                <ul class="list-disc list-inside mb-4">
+                    {% for topic, score in performance['topic_performance'].items() %}
+                    <li>{{ topic }}: {{ (score * 100)|round(2) }}%</li>
+                    {% endfor %}
+                </ul>
+                <h3 class="text-lg font-medium mb-2">Difficulty Performance</h3>
+                <ul class="list-disc list-inside mb-4">
+                    {% for difficulty, score in performance['difficulty_performance'].items() %}
+                    <li>{{ difficulty }}: {{ (score * 100)|round(2) }}%</li>
+                    {% endfor %}
+                </ul>
+                <p>Average Score: {{ performance['average_score']|round(2) }}</p>
+                <p>Improvement Trend: {{ performance['improvement_trend']|round(2) }} points per quiz</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-semibold mb-4">Predictions</h2>
+                <p class="text-lg mb-2">Predicted NEET Rank: <span class="font-bold">{{ predicted_rank }}</span></p>
+                <p class="text-lg mb-4">Predicted College: <span class="font-bold">{{ predicted_college }}</span></p>
+                <div class="mb-4">
+                    <h3 class="text-lg font-medium mb-2">Topic Performance</h3>
+                    <img src="{{ url_for('static', filename='topic_performance.png') }}" alt="Topic Performance" class="w-full">
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-2">Historical Score Trend</h3>
+                    <img src="{{ url_for('static', filename='historical_trend.png') }}" alt="Historical Score Trend" class="w-full">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
